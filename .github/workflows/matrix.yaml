@@ -27,5 +27,4 @@ jobs:
       - name: Print sata
         run: |
           python --version
-          pip install -r requirements.txt
           echo ${{ matrix.person }}
