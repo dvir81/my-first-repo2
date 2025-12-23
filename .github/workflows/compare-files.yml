@@ -13,7 +13,7 @@ jobs:
 
       - name: Compare file to repository variable
         run: |
-          FILE_VALUE=$(cat file_var.txt)
+          FILE_VALUE=$(file_var.txt)
 
           if [ "$FILE_VALUE" != "${{ vars.MY_REPO_VAR }}" ]; then
             echo "❌ File value does not match repository variable"
@@ -31,7 +31,7 @@ jobs:
 
       - name: Compare file to secret
         run: |
-          FILE_VALUE=$(cat file_secret.txt)
+          FILE_VALUE=$(file_secret.txt)
 
           if [ "$FILE_VALUE" != "${{ secrets.MY_REPO_SECRET }}" ]; then
             echo "❌ File value does not match secret"
